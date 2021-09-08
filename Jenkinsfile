@@ -2,9 +2,11 @@ pipeline {
     agent any
             stages {
 
+                def mvnHome = tool 'MAVEN_HOME'
                 stage('Run Tests') {
                                 steps {
-                                        sh 'mvn test'
+                                        echo "${mvnHome}"
+                                        sh "${mvnHome}/bin/mvn test"
                                  }
                       }
             }
