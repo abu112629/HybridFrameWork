@@ -4,7 +4,8 @@ pipeline {
 
                 stage('Run Tests') {
                                 steps {
-                                        sh 'mvn test'
+                                        echo "${MAVEN_HOME}"
+                                        sh '${MAVEN_HOME}/bin/mvn test'
                                  }
                       }
             }
