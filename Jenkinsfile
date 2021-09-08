@@ -1,13 +1,18 @@
 pipeline {
-    agent any
-            stages {
+    agent any{
 
-                stage('Run Tests') {
-                                steps {
-                                        echo "${MAVEN_HOME}"
-                                        sh '${MAVEN_HOME}/bin/mvn test'
-                                 }
-                      }
-            }
+        withEnv(["JAVA_HOME=${tool 'jdk8'}", "PATH+MAVEN=${tool 'maven'}/bin:${env.JAVA_HOME}/bin"])
+
+         stages {
+
+                        stage('Run Tests') {
+                                        steps {
+
+                                                sh 'mvn test'
+                                         }
+                              }
+                    }
+    }
+
 
   }
