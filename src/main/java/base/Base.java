@@ -36,6 +36,7 @@ public class Base {
             driver=new ChromeDriver();
         }
         else if(browserName.contains("ie")){
+            WebDriverManager.iedriver().setup();
             /*IE property instantiation*/
         }
         else if(browserName.contains("ff")){
