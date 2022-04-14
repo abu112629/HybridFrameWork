@@ -9,7 +9,7 @@ public class ExtentReportNG {
 
     public static ExtentReports getReportObject(){
 
-        String path="C:\\Users\\SiddiqAb\\OneDrive - Government of Ontario\\Desktop\\hybridframework\\reports\\index.html";
+        String path="./src/reports/index.html";
         ExtentSparkReporter reporter=new ExtentSparkReporter(path);
         reporter.config().setReportName("Mercury Automation Results");
         reporter.config().setDocumentTitle("Test Results");
