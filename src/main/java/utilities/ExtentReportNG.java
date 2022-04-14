@@ -9,7 +9,7 @@ public class ExtentReportNG {
 
     public static ExtentReports getReportObject(){
 
-        String path="./src/reports/index.html";
+        String path="./reports/index.html";
         ExtentSparkReporter reporter=new ExtentSparkReporter(path);
         reporter.config().setReportName("Mercury Automation Results");
         reporter.config().setDocumentTitle("Test Results");
