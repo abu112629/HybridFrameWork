@@ -40,6 +40,7 @@ public class Base {
         }
         else if(browserName.contains("ff")){
             /*firefox property instantiation*/
+            /*comment for bamboo auto run*/
         }
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
