@@ -50,7 +50,8 @@ public class Base {
     public String getScreenShotPath(String testCase,WebDriver driver) throws IOException {
         TakesScreenshot ts=(TakesScreenshot)driver;
         File source=ts.getScreenshotAs(OutputType.FILE);
-        String destinationFile="C:\\Users\\SiddiqAb\\OneDrive - Government of Ontario\\Desktop\\hybridframework\\reports\\"+testCase+".png";
+        String myHomePath=System.getProperty("user.home");
+        String destinationFile=".src\reports\"+testCase+".png";
         FileUtils.copyFile(source,new File(destinationFile));
         return destinationFile;
     }
